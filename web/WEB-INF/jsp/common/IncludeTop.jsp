@@ -54,7 +54,7 @@
                     Sign Out
                 </a>
                 <img align="middle" src="/images/separator.gif"/>
-                <a href="#!">
+                <a href="/viewAccount">
                     ${sessionScope.username}
                 </a>
             </c:if>

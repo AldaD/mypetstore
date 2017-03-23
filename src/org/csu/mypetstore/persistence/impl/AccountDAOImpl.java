@@ -62,16 +62,31 @@ account.getUsername(),account.getEmail(),account.getFirstName(),account.getLastN
 
     @Override
     public void updateAccount(Account account) {
-
+        String sql = "UPDATE account SET email = ?, firstname = ?, lastname = ?, status = ?,addr1 = ?, addr2 = ?, city = ?, state = ?, zip = ?, country = ?,phone = ? WHERE userid = ?";
+        Object[] params = new Object[]{
+                account.getEmail(),account.getFirstName(),account.getLastName(),account.getStatus(),
+                account.getAddress1(),account.getAddress2(),account.getCity(),account.getState(),
+                account.getZip(),account.getCountry(),account.getPhone(),account.getUsername()
+        };
+        DAOUtil.update(sql,params);
     }
 
     @Override
     public void updateProfile(Account account) {
-
+        String sql = "UPDATE profile SET langpref = ?, favcategory = ?, mylistopt = ?, banneropt = ? WHERE userid = ?";
+        Object[] params = new Object[]{
+                account.getLanguagePreference(),account.getFavouriteCategoryId(),account.isListOption(),account.isBannerOption(),account.getUsername()
+        };
+        DAOUtil.update(sql,params);
     }
 
     @Override
     public void updateSignon(Account account) {
+        String sql = "UPDATE signon SET  password = ? WHERE username = ?";
+        Object[] params = new Object[]{
+                account.getPassword()
+        };
+        DAOUtil.update(sql,params);
     }
     class FindList implements ResultSetManipulation{
         List<Account> list = null;

@@ -15,6 +15,6 @@ public class ViewOrderServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("/WEB-INF/jsp/order/ViewOrder.jsp").forward(request,response);
     }
 }

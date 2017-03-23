@@ -37,10 +37,13 @@ public class AccountService {
   public void updateAccount(Account account) {
 //    accountMapper.updateAccount(account);
 //    accountMapper.updateProfile(account);
-//
-//    if (account.getPassword() != null && account.getPassword().length() > 0) {
+
+    accountDAO.updateAccount(account);
+    accountDAO.updateProfile(account);
+    if (account.getPassword() != null && account.getPassword().length() > 0) {
 //      accountMapper.updateSignon(account);
-//    }
+      accountDAO.updateSignon(account);
+    }
   }
 
 }

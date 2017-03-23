@@ -71,6 +71,14 @@
         <servlet-name>SignOutServlet</servlet-name>
         <servlet-class>org.csu.mypetstore.web.servlets.SignOutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewAccountServlet</servlet-name>
+        <servlet-class>org.csu.mypetstore.web.servlets.ViewAccountServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModifyAccountServlet</servlet-name>
+        <servlet-class>org.csu.mypetstore.web.servlets.ModifyAccountServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/main</url-pattern>
@@ -138,5 +146,13 @@
     <servlet-mapping>
         <servlet-name>SignOutServlet</servlet-name>
         <url-pattern>/signOut</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAccountServlet</servlet-name>
+        <url-pattern>/viewAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModifyAccountServlet</servlet-name>
+        <url-pattern>/modifyAccount</url-pattern>
     </servlet-mapping>
 </web-app>
