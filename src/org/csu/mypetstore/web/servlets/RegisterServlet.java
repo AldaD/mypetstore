@@ -41,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
         String b  = request.getParameter("account.bannerOption");
         accountService.insertAccount(account);
         session.setAttribute("username",account.getUsername());
-        response.sendRedirect("/");
+        response.sendRedirect("/home");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
